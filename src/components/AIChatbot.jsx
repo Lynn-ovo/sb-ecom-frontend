@@ -67,7 +67,7 @@ export default function AIChatbot() {
             formData.append("image", imageFile);
 
             const res = await axios.post(
-                "http://localhost:8080/api/image-search",
+                `${import.meta.env.VITE_BACK_END_URL}/api/image-search`,
                 formData,
                 { headers: { "Content-Type": "multipart/form-data" } }
             );
