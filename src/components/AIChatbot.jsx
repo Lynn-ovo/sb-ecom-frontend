@@ -28,7 +28,7 @@ export default function AIChatbot() {
 
         try {
             const res = await axios.post(
-                "http://localhost:8080/api/chatbot",
+                `${import.meta.env.VITE_BACK_END_URL}/api/chatbot`,
                 { message: userText },
                 { headers: { "Content-Type": "application/json" } }
             );
